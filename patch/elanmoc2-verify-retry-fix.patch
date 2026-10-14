@@ -1,0 +1,58 @@
+diff --git a/libfprint/drivers/elanmoc2/elanmoc2.c b/libfprint/drivers/elanmoc2/elanmoc2.c
+index bec6aeb..53e83f3 100644
+--- a/libfprint/drivers/elanmoc2/elanmoc2.c
++++ b/libfprint/drivers/elanmoc2/elanmoc2.c
+@@ -500,12 +500,19 @@ elanmoc2_identify_verify_report (FpDevice *device, FpPrint *print,
+             }
+           fp_info ("Identify: no match");
+         }
+-      fpi_device_identify_report (device, NULL, print, *error);
++      /* Ownership of the error is transferred to the core here. */
++      fpi_device_identify_report (device, NULL, print, g_steal_pointer (error));
+       return TRUE;
+     }
+   else
+     {
+       FpiMatchResult result = FPI_MATCH_FAIL;
++      /* An error passed in must be reported as a match error, otherwise
++       * fpi_device_verify_report() will store it in data->error while the
++       * driver's g_autoptr frees it again (use-after-free), and the second
++       * report of a retry would trip the result_reported assertion. */
++      if (*error != NULL)
++        result = FPI_MATCH_ERROR;
+       if (print != NULL)
+         {
+           FpPrint *to_match = NULL;
+@@ -520,10 +527,11 @@ elanmoc2_identify_verify_report (FpDevice *device, FpPrint *print,
+           else
+             {
+               fp_info ("Verify: finger does not match");
+-              print = NULL;
++              g_clear_object (&print);
+             }
+         }
+-      fpi_device_verify_report (device, result, print, *error);
++      /* Ownership of the error is transferred to the core here. */
++      fpi_device_verify_report (device, result, print, g_steal_pointer (error));
+       return result != FPI_MATCH_FAIL;
+     }
+ }
+@@ -606,8 +614,17 @@ elanmoc2_identify_run_state (FpiSsm *ssm, FpDevice *device)
+             fp_info ("Identify failed: %s", error->message);
+             if (can_retry)
+               {
++                /* Report the retry error and complete the action: the core
++                 * finishes the task with the retry error and the application
++                 * (fprintd) restarts the verify with a fresh task. Jumping
++                 * back inside the SSM instead would re-report on the next
++                 * press and trip fpi_device_verify_report()'s
++                 * result_reported assertion (the flag is never reset), and
++                 * the stale data->error would later be used after the
++                 * driver's g_autoptr already freed it. */
+                 elanmoc2_identify_verify_report (device, NULL, &error);
+-                fpi_ssm_jump_to_state (ssm, IDENTIFY_IDENTIFY);
++                elanmoc2_identify_verify_complete (device, NULL);
++                fpi_ssm_mark_completed (g_steal_pointer (&self->ssm));
+               }
+             else
+               {

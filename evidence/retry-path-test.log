@@ -1,0 +1,219 @@
+** (umockdev-run:79807): DEBUG: 13:29:56.607: umockdev.vala:127: Created udev test bed /tmp/umockdev.5GTTW3
+** (umockdev-run:79807): DEBUG: 13:29:56.607: umockdev.vala:1414: parsing device description for /devices/pci0000:00/0000:00:14.0/usb3/3-9
+** (umockdev-run:79807): DEBUG: 13:29:56.608: umockdev.vala:1492: creating device /devices/pci0000:00/0000:00:14.0/usb3/3-9 (subsystem usb)
+** (umockdev-run:79807): DEBUG: 13:29:56.610: umockdev.vala:1538: create_node_for_device: creating file device /tmp/umockdev.5GTTW3/dev/bus/usb/003/004
+** (umockdev-run:79807): DEBUG: 13:29:56.610: umockdev.vala:1414: parsing device description for /devices/pci0000:00/0000:00:14.0/usb3
+** (umockdev-run:79807): DEBUG: 13:29:56.610: umockdev.vala:1492: creating device /devices/pci0000:00/0000:00:14.0/usb3 (subsystem usb)
+** (umockdev-run:79807): DEBUG: 13:29:56.612: umockdev.vala:1538: create_node_for_device: creating file device /tmp/umockdev.5GTTW3/dev/bus/usb/003/001
+** (umockdev-run:79807): DEBUG: 13:29:56.612: umockdev.vala:1414: parsing device description for /devices/pci0000:00/0000:00:14.0
+** (umockdev-run:79807): DEBUG: 13:29:56.612: umockdev.vala:1492: creating device /devices/pci0000:00/0000:00:14.0 (subsystem pci)
+(process:79811): libfprint-context-DEBUG: 13:29:56.727: Initializing FpContext (libfprint version 1.94.9)
+(process:79811): libfprint-context-DEBUG: 13:29:56.729: No driver found for USB device 1D6B:0002
+(process:79811): libfprint-device-DEBUG: 13:29:56.730: Device reported probe completion
+(process:79811): libfprint-device-DEBUG: 13:29:56.730: Completing action FPI_DEVICE_ACTION_PROBE in idle!
+(process:79811): libfprint-device-DEBUG: 13:29:56.730: Not updating temperature model, device can run continuously!
+(process:79811): libfprint-device-DEBUG: 13:29:56.731: Device reported open completion
+(process:79811): libfprint-device-DEBUG: 13:29:56.731: Completing action FPI_DEVICE_ACTION_OPEN in idle!
+(process:79811): libfprint-device-DEBUG: 13:29:56.731: Not updating temperature model, device can run continuously!
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.732: [elanmoc2] New clear storage operation
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.732: [elanmoc2] CLEAR_STORAGE_NUM_STATES entering state 0
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.732: Sent sensor wipe command, sensor will hang for ~5 seconds
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.732: [elanmoc2] CLEAR_STORAGE_NUM_STATES entering state 1
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.732: Querying number of enrolled fingers
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.733: Sent query for number of enrolled fingers
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.733: [elanmoc2] CLEAR_STORAGE_NUM_STATES entering state 2
+(process:79811): libfprint-device-DEBUG: 13:29:56.733: Device reported deletion completion
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.733: [elanmoc2] CLEAR_STORAGE_NUM_STATES completed successfully
+(process:79811): libfprint-device-DEBUG: 13:29:56.733: Completing action FPI_DEVICE_ACTION_CLEAR_STORAGE in idle!
+(process:79811): libfprint-device-DEBUG: 13:29:56.733: Not updating temperature model, device can run continuously!
+(process:79811): libfprint-device-DEBUG: 13:29:56.733: Not updating temperature model, device can run continuously!
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.733: [elanmoc2] New enroll operation
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.733: [elanmoc2] ENROLL_NUM_STATES entering state 0
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.733: Querying number of enrolled fingers
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.733: Sent query for number of enrolled fingers
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.734: [elanmoc2] ENROLL_NUM_STATES entering state 1
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.734: Enrolled count is 0, proceeding with enroll stage
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.734: [elanmoc2] ENROLL_NUM_STATES entering state 7
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.734: Enroll command sent: 0/8
+(process:79811): libfprint-device-DEBUG: 13:29:56.734: Device reported finger status change: FP_FINGER_STATUS_NEEDED
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.734: [elanmoc2] ENROLL_NUM_STATES entering state 8
+(process:79811): libfprint-device-DEBUG: 13:29:56.734: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.734: Enroll stage failed: Press your finger slightly harder on the sensor
+(process:79811): libfprint-device-DEBUG: 13:29:56.734: Device reported enroll progress, reported 0 of 8 have been completed
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.734: Performing another enroll
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.734: [elanmoc2] ENROLL_NUM_STATES entering state 7
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.734: Enroll command sent: 0/8
+(process:79811): libfprint-device-DEBUG: 13:29:56.734: Device reported finger status change: FP_FINGER_STATUS_NEEDED
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.735: [elanmoc2] ENROLL_NUM_STATES entering state 8
+(process:79811): libfprint-device-DEBUG: 13:29:56.735: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.735: Enroll stage succeeded
+(process:79811): libfprint-device-DEBUG: 13:29:56.735: Device reported enroll progress, reported 1 of 8 have been completed
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.735: Performing another enroll
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.735: [elanmoc2] ENROLL_NUM_STATES entering state 7
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.735: Enroll command sent: 1/8
+(process:79811): libfprint-device-DEBUG: 13:29:56.735: Device reported finger status change: FP_FINGER_STATUS_NEEDED
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.735: [elanmoc2] ENROLL_NUM_STATES entering state 8
+(process:79811): libfprint-device-DEBUG: 13:29:56.735: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.735: Enroll stage succeeded
+(process:79811): libfprint-device-DEBUG: 13:29:56.735: Device reported enroll progress, reported 2 of 8 have been completed
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.735: Performing another enroll
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.735: [elanmoc2] ENROLL_NUM_STATES entering state 7
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.735: Enroll command sent: 2/8
+(process:79811): libfprint-device-DEBUG: 13:29:56.735: Device reported finger status change: FP_FINGER_STATUS_NEEDED
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.736: [elanmoc2] ENROLL_NUM_STATES entering state 8
+(process:79811): libfprint-device-DEBUG: 13:29:56.736: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.736: Enroll stage failed: Press your finger slightly harder on the sensor
+(process:79811): libfprint-device-DEBUG: 13:29:56.736: Device reported enroll progress, reported 2 of 8 have been completed
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.736: Performing another enroll
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.736: [elanmoc2] ENROLL_NUM_STATES entering state 7
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.736: Enroll command sent: 2/8
+(process:79811): libfprint-device-DEBUG: 13:29:56.736: Device reported finger status change: FP_FINGER_STATUS_NEEDED
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.736: [elanmoc2] ENROLL_NUM_STATES entering state 8
+(process:79811): libfprint-device-DEBUG: 13:29:56.736: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.736: Enroll stage succeeded
+(process:79811): libfprint-device-DEBUG: 13:29:56.736: Device reported enroll progress, reported 3 of 8 have been completed
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.736: Performing another enroll
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.736: [elanmoc2] ENROLL_NUM_STATES entering state 7
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.736: Enroll command sent: 3/8
+(process:79811): libfprint-device-DEBUG: 13:29:56.736: Device reported finger status change: FP_FINGER_STATUS_NEEDED
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.736: [elanmoc2] ENROLL_NUM_STATES entering state 8
+(process:79811): libfprint-device-DEBUG: 13:29:56.736: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.736: Enroll stage succeeded
+(process:79811): libfprint-device-DEBUG: 13:29:56.736: Device reported enroll progress, reported 4 of 8 have been completed
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.736: Performing another enroll
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.736: [elanmoc2] ENROLL_NUM_STATES entering state 7
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.736: Enroll command sent: 4/8
+(process:79811): libfprint-device-DEBUG: 13:29:56.736: Device reported finger status change: FP_FINGER_STATUS_NEEDED
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.737: [elanmoc2] ENROLL_NUM_STATES entering state 8
+(process:79811): libfprint-device-DEBUG: 13:29:56.737: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.737: Enroll stage succeeded
+(process:79811): libfprint-device-DEBUG: 13:29:56.737: Device reported enroll progress, reported 5 of 8 have been completed
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.737: Performing another enroll
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.737: [elanmoc2] ENROLL_NUM_STATES entering state 7
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.737: Enroll command sent: 5/8
+(process:79811): libfprint-device-DEBUG: 13:29:56.737: Device reported finger status change: FP_FINGER_STATUS_NEEDED
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.737: [elanmoc2] ENROLL_NUM_STATES entering state 8
+(process:79811): libfprint-device-DEBUG: 13:29:56.737: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.737: Enroll stage failed: Press your finger slightly harder on the sensor
+(process:79811): libfprint-device-DEBUG: 13:29:56.737: Device reported enroll progress, reported 5 of 8 have been completed
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.737: Performing another enroll
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.737: [elanmoc2] ENROLL_NUM_STATES entering state 7
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.737: Enroll command sent: 5/8
+(process:79811): libfprint-device-DEBUG: 13:29:56.737: Device reported finger status change: FP_FINGER_STATUS_NEEDED
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.737: [elanmoc2] ENROLL_NUM_STATES entering state 8
+(process:79811): libfprint-device-DEBUG: 13:29:56.737: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.737: Enroll stage succeeded
+(process:79811): libfprint-device-DEBUG: 13:29:56.737: Device reported enroll progress, reported 6 of 8 have been completed
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.737: Performing another enroll
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.737: [elanmoc2] ENROLL_NUM_STATES entering state 7
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.737: Enroll command sent: 6/8
+(process:79811): libfprint-device-DEBUG: 13:29:56.737: Device reported finger status change: FP_FINGER_STATUS_NEEDED
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.738: [elanmoc2] ENROLL_NUM_STATES entering state 8
+(process:79811): libfprint-device-DEBUG: 13:29:56.738: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.738: Enroll stage succeeded
+(process:79811): libfprint-device-DEBUG: 13:29:56.738: Device reported enroll progress, reported 7 of 8 have been completed
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.738: Performing another enroll
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.738: [elanmoc2] ENROLL_NUM_STATES entering state 7
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.738: Enroll command sent: 7/8
+(process:79811): libfprint-device-DEBUG: 13:29:56.738: Device reported finger status change: FP_FINGER_STATUS_NEEDED
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.738: [elanmoc2] ENROLL_NUM_STATES entering state 8
+(process:79811): libfprint-device-DEBUG: 13:29:56.738: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.738: Enroll stage failed: Press your finger slightly harder on the sensor
+(process:79811): libfprint-device-DEBUG: 13:29:56.738: Device reported enroll progress, reported 7 of 8 have been completed
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.738: Performing another enroll
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.738: [elanmoc2] ENROLL_NUM_STATES entering state 7
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.738: Enroll command sent: 7/8
+(process:79811): libfprint-device-DEBUG: 13:29:56.738: Device reported finger status change: FP_FINGER_STATUS_NEEDED
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.738: [elanmoc2] ENROLL_NUM_STATES entering state 8
+(process:79811): libfprint-device-DEBUG: 13:29:56.738: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.738: Enroll stage succeeded
+(process:79811): libfprint-device-DEBUG: 13:29:56.738: Device reported enroll progress, reported 8 of 8 have been completed
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.738: Enroll completed
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.738: [elanmoc2] ENROLL_NUM_STATES entering state 9
+(process:79811): libfprint-device-DEBUG: 13:29:56.738: Device reported finger status change: FP_FINGER_STATUS_NONE
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.739: Check re-enroll command sent
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.739: [elanmoc2] ENROLL_NUM_STATES entering state 10
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.739: Finger is not enrolled, committing
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.739: Commit command sent
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.739: [elanmoc2] ENROLL_NUM_STATES entering state 11
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.739: Commit succeeded
+(process:79811): libfprint-device-DEBUG: 13:29:56.739: Device reported enroll completion
+(process:79811): libfprint-device-DEBUG: 13:29:56.739: Print for finger FP_FINGER_LEFT_INDEX enrolled
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.739: [elanmoc2] ENROLL_NUM_STATES completed successfully
+(process:79811): libfprint-device-DEBUG: 13:29:56.739: Completing action FPI_DEVICE_ACTION_ENROLL in idle!
+(process:79811): libfprint-device-DEBUG: 13:29:56.739: Not updating temperature model, device can run continuously!
+(process:79811): libfprint-device-DEBUG: 13:29:56.739: Not updating temperature model, device can run continuously!
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.739: [elanmoc2] New identify/verify operation
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.739: [elanmoc2] IDENTIFY_NUM_STATES entering state 0
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.739: Querying number of enrolled fingers
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.739: Sent query for number of enrolled fingers
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.740: [elanmoc2] IDENTIFY_NUM_STATES entering state 1
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.740: [elanmoc2] IDENTIFY_NUM_STATES entering state 2
+(process:79811): libfprint-device-DEBUG: 13:29:56.740: Device reported finger status change: FP_FINGER_STATUS_NEEDED
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.740: Sent identification request
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.740: [elanmoc2] IDENTIFY_NUM_STATES entering state 3
+(process:79811): libfprint-device-DEBUG: 13:29:56.740: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.740: Identify failed: Press your finger slightly harder on the sensor
+(process:79811): libfprint-device-DEBUG: 13:29:56.740: Device reported verify result
+(process:79811): libfprint-device-DEBUG: 13:29:56.740: Device reported verify completion
+(process:79811): libfprint-device-DEBUG: 13:29:56.740: Device reported finger status change: FP_FINGER_STATUS_NONE
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.740: [elanmoc2] IDENTIFY_NUM_STATES completed successfully
+(process:79811): libfprint-device-DEBUG: 13:29:56.740: Completing action FPI_DEVICE_ACTION_VERIFY in idle!
+(process:79811): libfprint-device-DEBUG: 13:29:56.740: Not updating temperature model, device can run continuously!
+(process:79811): libfprint-device-DEBUG: 13:29:56.740: Not updating temperature model, device can run continuously!
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.740: [elanmoc2] New identify/verify operation
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.740: [elanmoc2] IDENTIFY_NUM_STATES entering state 0
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.740: Querying number of enrolled fingers
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.741: Sent query for number of enrolled fingers
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.741: [elanmoc2] IDENTIFY_NUM_STATES entering state 1
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.741: [elanmoc2] IDENTIFY_NUM_STATES entering state 2
+(process:79811): libfprint-device-DEBUG: 13:29:56.741: Device reported finger status change: FP_FINGER_STATUS_NEEDED
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.741: Sent identification request
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.741: [elanmoc2] IDENTIFY_NUM_STATES entering state 3
+(process:79811): libfprint-device-DEBUG: 13:29:56.741: Device reported finger status change: FP_FINGER_STATUS_PRESENT
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.741: Identified finger 0; requesting finger info
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.742: [elanmoc2] IDENTIFY_NUM_STATES entering state 4
+(process:79811): libfprint-device-DEBUG: 13:29:56.742: Device reported finger status change: FP_FINGER_STATUS_NONE
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.742: Creating new print: finger 0, user id[30]: FP1-00000000-2-00000000-nobody
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.742: Finger info with libfprint user ID
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.742: Verify: finger matches
+(process:79811): libfprint-device-DEBUG: 13:29:56.742: Device reported verify result
+(process:79811): libfprint-device-DEBUG: 13:29:56.742: Device reported verify completion
+(process:79811): libfprint-SSM-DEBUG: 13:29:56.742: [elanmoc2] IDENTIFY_NUM_STATES completed successfully
+(process:79811): libfprint-device-DEBUG: 13:29:56.742: Completing action FPI_DEVICE_ACTION_VERIFY in idle!
+(process:79811): libfprint-device-DEBUG: 13:29:56.742: Not updating temperature model, device can run continuously!
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.742: Closing device
+(process:79811): libfprint-elanmoc2-DEBUG: 13:29:56.742: Cancelling any ongoing requests
+(process:79811): libfprint-device-DEBUG: 13:29:56.742: Device reported close completion
+libusb: error [do_close] Device handle closed while transfer was still being processed, but the device is still connected as far as we know
+libusb: error [do_close] A cancellation hasn't even been scheduled on the transfer for which the device is closing
+(process:79811): libfprint-device-DEBUG: 13:29:56.742: Completing action FPI_DEVICE_ACTION_CLOSE in idle!
+(process:79811): libfprint-device-DEBUG: 13:29:56.742: Not updating temperature model, device can run continuously!
+device: ELAN Match-on-Chip 2 | driver: elanmoc2
+clearing device storage
+enrolling one finger
+  enroll progress: (<__gi__.FpiDeviceElanMoC2 object at 0x7f91c4d3cd40 (FpiDeviceElanMoC2 at 0x5632d77781b0)>, 0, None, None, GLib.Error('Press your finger slightly harder on the sensor', 'fp - device - retry - quark', 3))
+  enroll progress: (<__gi__.FpiDeviceElanMoC2 object at 0x7f91c4d3cd40 (FpiDeviceElanMoC2 at 0x5632d77781b0)>, 1, <FPrint.Print object at 0x7f91c4d3e340 (FpPrint at 0x5632d773b5b0)>, None, None)
+  enroll progress: (<__gi__.FpiDeviceElanMoC2 object at 0x7f91c4d3cd40 (FpiDeviceElanMoC2 at 0x5632d77781b0)>, 2, <FPrint.Print object at 0x7f91c4d3e340 (FpPrint at 0x5632d773b5b0)>, None, None)
+  enroll progress: (<__gi__.FpiDeviceElanMoC2 object at 0x7f91c4d3cd40 (FpiDeviceElanMoC2 at 0x5632d77781b0)>, 2, None, None, GLib.Error('Press your finger slightly harder on the sensor', 'fp - device - retry - quark', 3))
+  enroll progress: (<__gi__.FpiDeviceElanMoC2 object at 0x7f91c4d3cd40 (FpiDeviceElanMoC2 at 0x5632d77781b0)>, 3, <FPrint.Print object at 0x7f91c4d3e340 (FpPrint at 0x5632d773b5b0)>, None, None)
+  enroll progress: (<__gi__.FpiDeviceElanMoC2 object at 0x7f91c4d3cd40 (FpiDeviceElanMoC2 at 0x5632d77781b0)>, 4, <FPrint.Print object at 0x7f91c4d3e340 (FpPrint at 0x5632d773b5b0)>, None, None)
+  enroll progress: (<__gi__.FpiDeviceElanMoC2 object at 0x7f91c4d3cd40 (FpiDeviceElanMoC2 at 0x5632d77781b0)>, 5, <FPrint.Print object at 0x7f91c4d3e340 (FpPrint at 0x5632d773b5b0)>, None, None)
+  enroll progress: (<__gi__.FpiDeviceElanMoC2 object at 0x7f91c4d3cd40 (FpiDeviceElanMoC2 at 0x5632d77781b0)>, 5, None, None, GLib.Error('Press your finger slightly harder on the sensor', 'fp - device - retry - quark', 3))
+  enroll progress: (<__gi__.FpiDeviceElanMoC2 object at 0x7f91c4d3cd40 (FpiDeviceElanMoC2 at 0x5632d77781b0)>, 6, <FPrint.Print object at 0x7f91c4d3e340 (FpPrint at 0x5632d773b5b0)>, None, None)
+  enroll progress: (<__gi__.FpiDeviceElanMoC2 object at 0x7f91c4d3cd40 (FpiDeviceElanMoC2 at 0x5632d77781b0)>, 7, <FPrint.Print object at 0x7f91c4d3e340 (FpPrint at 0x5632d773b5b0)>, None, None)
+  enroll progress: (<__gi__.FpiDeviceElanMoC2 object at 0x7f91c4d3cd40 (FpiDeviceElanMoC2 at 0x5632d77781b0)>, 7, None, None, GLib.Error('Press your finger slightly harder on the sensor', 'fp - device - retry - quark', 3))
+  enroll progress: (<__gi__.FpiDeviceElanMoC2 object at 0x7f91c4d3cd40 (FpiDeviceElanMoC2 at 0x5632d77781b0)>, 8, <FPrint.Print object at 0x7f91c4d3e340 (FpPrint at 0x5632d773b5b0)>, None, None)
+enroll done
+verify attempt #1 (identify resp patched to 40fe -> retry expected)
+verify#1 error: domain='fp - device - retry - quark' code=3 msg='Press your finger slightly harder on the sensor'
+RETRY_REPORTED_CLEANLY
+verify attempt #2 (fresh task restart, mimics fprintd verify_cb)
+verify#2 done: result=True, print=yes
+VERIFY_OK
+RETRY_PATH_OK
+ALL_OK
+libusb: warning [libusb_exit] device 3.4 still referenced
+libusb: warning [libusb_exit] device 3.1 still referenced
+** (umockdev-run:79807): DEBUG: 13:29:56.761: umockdev.vala:154: Removing test bed /tmp/umockdev.5GTTW3
+(umockdev-run:79807): GLib-DEBUG: 13:29:56.763: unsetenv() is not thread-safe and should not be used after threads are created
