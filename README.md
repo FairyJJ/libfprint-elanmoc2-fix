@@ -35,6 +35,12 @@
 | 真实硬件 | ELAN `04f3:0c00`（HP Pavilion Aero 13），补丁版装到系统 | 轻压/湿手 → `verify-remove-and-retry` 干净上报（正是以前崩溃那条路径）；错指纹 → `verify-no-match`；正确指纹 → **`verify-match`，`fprintd-verify` 退出码 0** |
 | polkit 端到端 | `pkcheck --allow-user-interaction` | GNOME 对话框 → PAM → `Verify: finger matches` → **退出码 0** |
 
+## 另一个现场问题：无人触摸时立即匹配失败
+
+2026-10-16 在 ELAN `04f3:0c00` 设备上还遇到过另一种情况：锁屏刚唤醒就显示“指纹匹配失败”，即使没有触碰读头。它与本仓库修复的 retry UAF / 重复上报崩溃是不同问题。调试日志显示主机仍保存着旧指纹记录，但传感器查询到的板载录入数量为 0；驱动因此在采集前直接返回 `verify-no-match`。
+
+在该案例中，清理失效的主机记录并重新录入后，无触摸验证会继续等待而非立即失败，用户随后确认锁屏指纹解锁恢复正常。排查证据和谨慎的恢复步骤见 **[docs/NO-TOUCH-NO-MATCH.md](docs/NO-TOUCH-NO-MATCH.md)**。这份记录描述的是该设备上的具体诊断，不代表所有“无人触摸即失败”问题都由同一原因造成。
+
 ## 应用
 
 补丁基线：Depau/libfprint `elanmoc2` 分支 HEAD `11f0316`（`git apply --check` 实测零冲突）：
@@ -62,6 +68,7 @@ Arch 用户可直接使用本地重建的 `libfprint-elanmoc2-git 1.94.0+372+g11
 | `patch/0001-elanmoc2-fix-verify-retry-uaf.patch` | format-patch（含 commit message） |
 | `docs/commit-message.txt` | commit message（`elanmoc2:` 前缀，与分支历史风格一致） |
 | `docs/UPSTREAM.md` | 上游 MR 描述（英文）+ 提交步骤 |
+| `docs/NO-TOUCH-NO-MATCH.md` | 设备记录与主机记录不同步导致的无触摸误失败诊断 |
 | `evidence/retry-path-test.log` | 重试路径确定性回放全量日志 |
 | `scripts/submit.sh` | 一键 apply + commit |
 
